@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间线网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>时间线</h1>
+            <button class="add-btn" id="addBtn">+ 添加时间点</button>
+        </header>
+
+        <!-- 添加时间点表单 -->
+        <div class="form-modal" id="formModal">
+            <div class="form-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2>添加新时间点</h2>
+                <form id="timelineForm">
+                    <div class="form-group">
+                        <label for="date">日期：</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">标题：</label>
+                        <input type="text" id="title" placeholder="输入标题" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">描述：</label>
+                        <textarea id="description" placeholder="输入描述内容" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">图片URL：</label>
+                        <input type="url" id="image" placeholder="输入图片链接">
+                    </div>
+                    <button type="submit" class="submit-btn">添加</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 时间线容器 -->
+        <div class="timeline-container" id="timelineContainer">
+            <!-- 时间点将通过JavaScript动态添加 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
